@@ -1,11 +1,13 @@
 package Model;
 
-public class Book extends Item implements Printable, Crud {
+public class Book extends Item {
 	private String isbn;
+	private String condition;
 
-	public Book(String title, String authorRef, String isbn) {
+	public Book(String title, String authorRef, String isbn, String condition) {
 		super(title, authorRef);
 		this.isbn = isbn;
+		this.condition = condition;
 
 	}
 
@@ -21,21 +23,24 @@ public class Book extends Item implements Printable, Crud {
 		System.out.println("I am printing");
 	}
 
+	public String getCondition() {
+		return condition;
+	}
+
+	public void setCondition(String condition) {
+		this.condition = condition;
+	}
+
 	@Override
-	public void read() {
-		// TODO Auto-generated method stub
+	public void updateTitle(String title) {
+		super.setTitle(title);
 
 	}
 
 	@Override
-	public void update() {
+	public String toString() {
 		// TODO Auto-generated method stub
-
+		return super.getTitle();
 	}
 
-	@Override
-	public void delete() {
-		// TODO Auto-generated method stub
-
-	}
 }

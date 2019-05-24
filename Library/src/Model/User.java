@@ -1,15 +1,16 @@
 package Model;
 
-public class User implements Crud {
+public class User implements Updateable {
 
 	private String name;
 	private int age;
 	private int id;
+	private static int counterId = 1;
 
-	public User(String name, int age, int id) {
+	public User(String name, int age) {
 		this.name = name;
 		this.age = age;
-		this.id = id;
+		this.id = counterId++;
 
 	}
 
@@ -38,19 +39,7 @@ public class User implements Crud {
 	}
 
 	@Override
-	public void read() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void update() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void delete() {
 		// TODO Auto-generated method stub
 
 	}

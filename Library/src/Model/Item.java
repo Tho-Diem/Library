@@ -1,6 +1,6 @@
 package Model;
 
-abstract public class Item {
+abstract public class Item implements Updateable {
 	private String title;
 	private String authorRef;
 
